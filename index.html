@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="bookDisplay"></div>
+    <button onclick="showForm()">ADD NEW BOOK</button>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <form onsubmit="addNewBook(event)">
+                <label for="title">Title:</label>
+                <input type="text" id="title" required><br>
+
+                <label for="author">Author:</label>
+                <input type="text" id="author" required><br>
+
+                <label for="pages">Pages:</label>
+                <input type="number" id="pages" required><br>
+
+                <label for="read">Read:</label>
+                <select id="read" required>
+                    <option value="read">Read</option>
+                    <option value="not read yet">Not Read Yet</option>
+                </select><br>
+
+                <input type="submit" value="Add Book">
+            </form>
+        </div>
+</body>
+</html>
