@@ -8,29 +8,71 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="bookDisplay"></div>
-    <button onclick="showForm()">ADD NEW BOOK</button>
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <form onsubmit="addNewBook(event)">
-                <label for="title">Title:</label>
-                <input type="text" id="title" required><br>
-
-                <label for="author">Author:</label>
-                <input type="text" id="author" required><br>
-
-                <label for="pages">Pages:</label>
-                <input type="number" id="pages" required><br>
-
-                <label for="read">Read:</label>
-                <select id="read" required>
-                    <option value="read">Read</option>
-                    <option value="not read yet">Not Read Yet</option>
-                </select><br>
-
-                <input type="submit" value="Add Book">
-            </form>
+    <header>
+        <h1>My Books collection</h1>
+        <button id="sign-in-btn">Sign in</button>
+    </header>
+    <aside> <br><br>
+        <hr class="hr">
+        <div>Informations</div>
+        <hr>
+        <div class="info">
+            <p>Number of books:</p><p id="book-count"></p>
         </div>
+        <div class="info">
+            <p>completed books:</p><p id="c-book-count"></p>
+        </div>
+        <div class="info">
+            <p>Total pages:</p><p id="pages-count"></p>
+        </div>
+        <div class="info">
+            <p>Completed:</p><p id="c-pages-count"></p>
+        </div>
+        <hr>
+        <hr class="hr">
+        <div>Storage Options</div>
+        <hr>
+        <input type="button" value="Delete Storage"  id="clear" >
+        <hr>
+
+
+    </aside>
+    <main>
+
+        <div id="bookDisplay">
+
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <form onsubmit="addNewBook(event)">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" required><br>
+
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" required><br>
+
+                    <label for="pages">Pages:</label>
+                    <input type="number" id="pages" required><br>
+
+                    <label for="read">Read:</label>
+                    <select id="read" required>
+                        <option value="read">Read</option>
+                        <option value="not read yet">Not Read Yet</option>
+                    </select><br>
+                    <label for="completed-pages">completed Pages:</label>
+                    <input type="number" id="completed-pages"><br>
+
+                    <input type="submit" value="Add Book">
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Copyright &COPY; 2024 | All Rights Reserved | Creator: Triki Hamdi
+    </footer>
+
+
 </body>
 </html>
