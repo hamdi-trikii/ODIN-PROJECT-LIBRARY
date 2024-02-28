@@ -1,4 +1,4 @@
-function Book(title, author, pages, read,completedPages) {
+/* function Book(title, author, pages, read,completedPages) {
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -9,7 +9,21 @@ function Book(title, author, pages, read,completedPages) {
     }; 
 
 }
+ */
+// Refactor it to class folowing the odin project practice in classes..
+class Book {
+    constructor(title,author,pages,read,completedPages){
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.completedPages=completedPages
+    }
+    info(){
+        return this.title + " By " + this.author + ", " + this.pages + " pages, " + this.read;
+    }
 
+}
 let myLibrary = [];
 
 function addBookToLibrary(title, author, pages, read,completedPages) {
